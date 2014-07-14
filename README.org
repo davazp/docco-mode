@@ -1,0 +1,5 @@
+* docco-mode
+
+Docco-mode is a quick-and-dirty documentation tool for Emacs.
+
+It is inspired by [[https://github.com/jashkenas/docco][docco]].
