@@ -166,7 +166,7 @@ source buffer.")
   (when docco-source-buffer
     (with-current-buffer docco-source-buffer
       ;; TODO: We make all the text visible, but it could not to
-      ;; revert the buffer properly if there was somthing visible
+      ;; revert the buffer properly if there was something invisible
       ;; before.
       (put-text-property (point-min) (point-max) 'display nil)
       (set-window-configuration docco-window-configuration))))
