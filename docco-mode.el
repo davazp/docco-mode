@@ -159,8 +159,14 @@ source buffer.")
 
 
 (defun docco--prepare-windows ()
+  ;; Disable line truncating.
+  ;; TODO: Restore configuration in `docco--cleanup'.
+  (setq truncate-partial-width-windows nil)
+  (with-docco-comments-buffer
+    (setq truncate-partial-width-windows nil))
   (setq docco-window-configuration (current-window-configuration))
   (set-window-buffer (split-window-horizontally) docco-comments-buffer))
+
 
 (defun docco--cleanup ()
   (when docco-source-buffer
